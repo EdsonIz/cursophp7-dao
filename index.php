@@ -30,9 +30,16 @@ foreach ($usuarios as $row) {
 //echo $aluno;
 
 //alterando um usuário
+//$usuario = new Usuario();
+//$usuario->loadById(10);
+//$usuario->update("Professor", "senhaprofessor");
+//echo $usuario;
+
+//deletando um registro
 $usuario = new Usuario();
-$usuario->loadById(10);
-$usuario->update("Professor", "senhaprofessor");
+$usuario->loadById(7);
+$usuario->delete();
 echo $usuario;
+
 
 
