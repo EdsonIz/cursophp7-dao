@@ -7,20 +7,28 @@ require_once 'config.php';
 //echo $usuario;
 
 //carrega uma lista de usuários
-$usuarios = Usuario::getList();
+/*$usuarios = Usuario::getList();
 foreach ($usuarios as $row) {
     foreach ($row as $key => $value) {
         echo $key." = ".$value."<br>";
     }
     echo "======================================<br>";
-}
+}*/
 
 //carrega uma lista de usuários buscando pelo login
 //$search = Usuario::search("o");
 //echo json_encode($search);
 
 //carrega um usuário usando login e senha
-$usuario = new Usuario();
-$usuario->login("Ambrósio", "dasffdasfa");
-echo $usuario;
+//$usuario = new Usuario();
+//$usuario->login("Edson", "12345678");
+//echo $usuario;
+
+//inserir um novo usuário
+$aluno = new Usuario();
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("senhaaluno");
+$aluno->insert();
+echo $aluno;
+
 
