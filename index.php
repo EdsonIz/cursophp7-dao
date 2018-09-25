@@ -25,10 +25,14 @@ foreach ($usuarios as $row) {
 //echo $usuario;
 
 //inserir um novo usuário
-$aluno = new Usuario();
-$aluno->setDeslogin("aluno");
-$aluno->setDessenha("senhaaluno");
-$aluno->insert();
-echo $aluno;
+//$aluno = new Usuario("aluno","senhaaluno" );
+//$aluno->insert();
+//echo $aluno;
+
+//alterando um usuário
+$usuario = new Usuario();
+$usuario->loadById(10);
+$usuario->update("Professor", "senhaprofessor");
+echo $usuario;
 
 
